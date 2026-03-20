@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,10 +20,32 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n -1*/
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n*/
+            background-color: lightgray;
+        }
+
         td.num {
             text-align: right;
         }
@@ -33,6 +56,7 @@
     <!-- 
        Anatomia para tabelas grandes
        table
+           caption
            thead
                tr, td, th
             tbody
@@ -41,10 +65,11 @@
                 tr, td, th
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -157,10 +182,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>213.421.037</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quam quos! Maiores ipsam sequi dignissimos magnam quae velit commodi libero, omnis natus quam eum fugit quis ullam officia placeat at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt, sapiente ullam blanditiis accusamus numquam! Labore dolorum neque reprehenderit rerum quidem distinctio quae omnis dolor ad, necessitatibus sunt quos nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum odit blanditiis non atque suscipit placeat tempore nostrum, labore facere quibusdam voluptatem ipsa magnam quidem corporis voluptatibus corrupti soluta eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui exercitationem rerum voluptatem nostrum inventore ut ipsa. Quos, qui consectetur optio ullam necessitatibus aliquam quo, deserunt facilis deleniti perferendis consequatur eaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quam quos! Maiores ipsam sequi dignissimos magnam quae velit commodi libero, omnis natus quam eum fugit quis ullam officia placeat at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt, sapiente ullam blanditiis accusamus numquam! Labore dolorum neque reprehenderit rerum quidem distinctio quae omnis dolor ad, necessitatibus sunt quos nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum odit blanditiis non atque suscipit placeat tempore nostrum, labore facere quibusdam voluptatem ipsa magnam quidem corporis voluptatibus corrupti soluta eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui exercitationem rerum voluptatem nostrum inventore ut ipsa. Quos, qui consectetur optio ullam necessitatibus aliquam quo, deserunt facilis deleniti perferendis consequatur eaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quam quos! Maiores ipsam sequi dignissimos magnam quae velit commodi libero, omnis natus quam eum fugit quis ullam officia placeat at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt, sapiente ullam blanditiis accusamus numquam! Labore dolorum neque reprehenderit rerum quidem distinctio quae omnis dolor ad, necessitatibus sunt quos nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum odit blanditiis non atque suscipit placeat tempore nostrum, labore facere quibusdam voluptatem ipsa magnam quidem corporis voluptatibus corrupti soluta eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui exercitationem rerum voluptatem nostrum inventore ut ipsa. Quos, qui consectetur optio ullam necessitatibus aliquam quo, deserunt facilis deleniti perferendis consequatur eaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quam quos! Maiores ipsam sequi dignissimos magnam quae velit commodi libero, omnis natus quam eum fugit quis ullam officia placeat at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt, sapiente ullam blanditiis accusamus numquam! Labore dolorum neque reprehenderit rerum quidem distinctio quae omnis dolor ad, necessitatibus sunt quos nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum odit blanditiis non atque suscipit placeat tempore nostrum, labore facere quibusdam voluptatem ipsa magnam quidem corporis voluptatibus corrupti soluta eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui exercitationem rerum voluptatem nostrum inventore ut ipsa. Quos, qui consectetur optio ullam necessitatibus aliquam quo, deserunt facilis deleniti perferendis consequatur eaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quam quos! Maiores ipsam sequi dignissimos magnam quae velit commodi libero, omnis natus quam eum fugit quis ullam officia placeat at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt, sapiente ullam blanditiis accusamus numquam! Labore dolorum neque reprehenderit rerum quidem distinctio quae omnis dolor ad, necessitatibus sunt quos nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum odit blanditiis non atque suscipit placeat tempore nostrum, labore facere quibusdam voluptatem ipsa magnam quidem corporis voluptatibus corrupti soluta eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui exercitationem rerum voluptatem nostrum inventore ut ipsa. Quos, qui consectetur optio ullam necessitatibus aliquam quo, deserunt facilis deleniti perferendis consequatur eaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quam quos! Maiores ipsam sequi dignissimos magnam quae velit commodi libero, omnis natus quam eum fugit quis ullam officia placeat at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea nesciunt, sapiente ullam blanditiis accusamus numquam! Labore dolorum neque reprehenderit rerum quidem distinctio quae omnis dolor ad, necessitatibus sunt quos nihil! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur earum odit blanditiis non atque suscipit placeat tempore nostrum, labore facere quibusdam voluptatem ipsa magnam quidem corporis voluptatibus corrupti soluta eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui exercitationem rerum voluptatem nostrum inventore ut ipsa. Quos, qui consectetur optio ullam necessitatibus aliquam quo, deserunt facilis deleniti perferendis consequatur eaque.</p>
 </body>
 </html>
